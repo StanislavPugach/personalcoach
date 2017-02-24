@@ -23,13 +23,13 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<jsp:include page="header.jsp"/>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-md-offset-4">
-                <h1 class="text-center login-title">Sign in to continue to Personal Coach</h1>
+                <h1 class="text-center login-title">Login to Personal Coach</h1>
                 <div class="account-wall">
-                    <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-                         alt="">
                     <form:form action="/login" method="POST" class="form-signin">
                         <input type="text" class="form-control" placeholder="Username" name="username" required autofocus>
                         <input type="password" class="form-control" placeholder="Password" name="password" required>
@@ -43,10 +43,12 @@
                         <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                     </form:form>
                 </div>
-                <a href="#" class="text-center new-account">Create an account </a>
+                <a href="/registration" class="text-center new-account">Create an account </a>
             </div>
         </div>
     </div>
+
+<jsp:include page="footer.jsp"/>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

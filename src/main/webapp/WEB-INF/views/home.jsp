@@ -130,20 +130,18 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Personal Coach 2016 </p>
-            </div>
-        </div>
-    </footer>
+    <div>
+        <sec:authorize access="hasRole('ROLE_CLIENT')">
+            <h1>
+                CLIEEEENT!!!
+            </h1>
+        </sec:authorize>
+    </div>
 
-    <sec:authorize access="hasRole('ROLE_ADMIN')">
-        <h1>ADMIIIIIIIN!!!!!</h1>
-    </sec:authorize>
+<jsp:include page="footer.jsp"/>
 
 </div>
+
 
     <hr>
 

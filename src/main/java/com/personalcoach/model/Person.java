@@ -25,11 +25,12 @@ public class Person extends AbstractPersistable<Long> {
     private String lastName;
 
     @NotNull
+    @Size(min = 2,max = 50)
     private String login;
 
     @NotNull
     @Size(min = 6, max = 50)
-    @Pattern(regexp = "^[А-Я]{2}\\d{6}$")
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z[а-я]])(?=.*[A-Z[А-Я]])(?=\\S+$).{8,}$")
     private String password;
 
     @Past
@@ -39,7 +40,7 @@ public class Person extends AbstractPersistable<Long> {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @Size(min = 10, max = 13)
+    @Size(min = 10, max = 50)
     private String email;
     //TODO add email validation
 

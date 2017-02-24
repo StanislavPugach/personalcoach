@@ -1,9 +1,8 @@
 package com.personalcoach.model;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import com.personalcoach.model.enams.UserRole;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -11,9 +10,10 @@ import java.util.List;
 @Table(name = "coaches")
 public class Coach extends Person{
 
+    @Enumerated(EnumType.STRING)
+    private final UserRole role = UserRole.ROLE_COACH;
     @ElementCollection
     private List<Integer> rating;
-    @NotNull
     private Float experience;
     @OneToMany(mappedBy = "coach")
     private List<Education> education;

@@ -56,12 +56,16 @@
                     <li>
                         <a href="#">Coaches</a>
                     </li>
+                    <sec:authorize access="!isAuthenticated()">
                     <li>
                         <a href="/loginpage">LogIn</a>
                     </li>
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
                     <li>
                         <a href="#">Sing out</a>
                     </li>
+                    </sec:authorize>
                         </ul>
                     </li>
                 </ul>
