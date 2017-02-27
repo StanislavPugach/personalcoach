@@ -1,5 +1,7 @@
 package com.personalcoach.model;
 
+import com.personalcoach.model.enams.UserRole;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +10,8 @@ import java.util.List;
 @Table(name = "clients")
 public class Client extends Person {
 
+    @Enumerated(EnumType.STRING)
+    private final UserRole role = UserRole.ROLE_CLIENT;
     @ManyToOne
     @JoinColumn
     private Coach coach;

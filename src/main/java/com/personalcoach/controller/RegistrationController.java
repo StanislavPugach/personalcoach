@@ -4,7 +4,6 @@ import com.personalcoach.model.Client;
 import com.personalcoach.model.Coach;
 import com.personalcoach.model.Registration;
 import com.personalcoach.model.enams.UserRole;
-import com.personalcoach.repository.CoachRepository;
 import com.personalcoach.service.ClientService;
 import com.personalcoach.service.CoachService;
 import org.springframework.beans.factory.annotation.Autowired;

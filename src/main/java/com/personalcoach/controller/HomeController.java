@@ -16,24 +16,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.validation.Valid;
 
 @Controller
-public class TestController {
-
-    @Autowired
-    private TestService testService;
-
-    @Autowired
-    private RegistrationService registrationService;
+public class HomeController {
 
     @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.HEAD})
     public String home() {
         return "home";
-    }
-
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
-    public String showOne (@RequestParam("id") long id, Model model){
-        model.addAttribute("testvar",testService.findOne(id));
-
-        return "404";
     }
 
     @RequestMapping(value = "/loginpage", method = RequestMethod.GET)
